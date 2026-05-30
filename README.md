@@ -67,10 +67,9 @@
 
 $$\mathcal{L} = \mathcal{L}_{D}(\hat{D},D) + \mathcal{L}_{M}(\hat{R},M) + \mathcal{L}_{P}(\hat{D}\otimes d+t,P) + \mathcal{L}_{grad}(\hat{D},D) + L_{music}$$
 
-  * $\mathcal{L}_{D}$ 및 $\mathcal{L}_{grad}$: 깊이 추정 및 오차 최소화
-  * $\mathcal{L}_{M}$: Object Mask 분할
-  * $L_{music}$: 커스텀 아키텍처 최적화를 위한 핵심 손실 함수
-  
+ * $\mathcal{L}_{D} \ / \ \mathcal{L}_{grad}$: 깊이 추정 및 오차 최소화
+ * $\mathcal{L}_{M}$: Object Mask 분할
+ * $L_{music}$: 커스텀 아키텍처 최적화를 위한 핵심 손실 함수
 
 ### 4.2. 데이터 증강 및 파인 튜닝 (Data Augmentation)
 * **ARIA & Blender Python API 활용**: 3D 가상 환경 데이터를 활용하여 다양한 카메라 위치, 텍스처, 크기, 랜덤 스케일 변화를 주는 Augmentation 파이프라인을 구축했습니다.
