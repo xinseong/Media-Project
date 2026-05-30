@@ -67,7 +67,7 @@
 
 $$\mathcal{L} = \mathcal{L}_{D}(\hat{D},D) + \mathcal{L}_{M}(\hat{R},M) + \mathcal{L}_{P}(\hat{D}\otimes d+t,P) + \mathcal{L}_{grad}(\hat{D},D) + L_{music}$$
 
-  * $\mathcal{L}_{D}$ / $\mathcal{L}_{grad}$: 깊이 추정 및 오차 최소화
+  * $\mathcal{L}_{D}$ /  $\mathcal{L}_{grad}$ : 깊이 추정 및 오차 최소화
   * $\mathcal{L}_{M}$: Object Mask 분할
   * $L_{music}$: 커스텀 아키텍처 최적화를 위한 핵심 손실 함수
 
