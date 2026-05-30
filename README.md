@@ -1,4 +1,3 @@
-# 몇ML: AR 기반 액체 부피 측정 애플리케이션
 <div align="center">
   
   <h1>몇ML (How Many ML)</h1>
@@ -63,16 +62,14 @@
 <img width="701" height="366" alt="Image" src="https://github.com/user-attachments/assets/3329571c-3d3f-46d8-a014-aa8b99041c48" />
 </p>
 
-* **Loss Function**
+* **Loss Function**<br>
   기존 Loss 스케일에 Object Head 및 Dual-OPT Head를 연동하여 오차를 최소화하는 $L_{music}$ 손실 함수를 추가 정의했습니다.
 
-  ```math
-  \mathcal{L} = \mathcal{L}_{D}(\hat{D},D) + \mathcal{L}_{M}(\hat{R},M) + \mathcal{L}_{P}(\hat{D}\otimes d+t,P) + \mathcal{L}_{grad}(\hat{D},D) + L_{music}
-  ```
+$$\mathcal{L} = \mathcal{L}_{D}(\hat{D},D) + \mathcal{L}_{M}(\hat{R},M) + \mathcal{L}_{P}(\hat{D}\otimes d+t,P) + \mathcal{L}_{grad}(\hat{D},D) + L_{music}$$
 
-  * **$\mathcal{L}_{D}$ / $\mathcal{L}_{grad}$**: 깊이 추정 및 오차 최소화
-  * **$\mathcal{L}_{M}$**: Object Mask 분할
-  * **$L_{music}$**: 커스텀 아키텍처 최적화를 위한 핵심 손실 함수
+  * $\mathcal{L}_{D}$ / $\mathcal{L}_{grad}$: 깊이 추정 및 오차 최소화
+  * $\mathcal{L}_{M}$: Object Mask 분할
+  * $L_{music}$: 커스텀 아키텍처 최적화를 위한 핵심 손실 함수
 
 ### 4.2. 데이터 증강 및 파인 튜닝 (Data Augmentation)
 * **ARIA & Blender Python API 활용**: 3D 가상 환경 데이터를 활용하여 다양한 카메라 위치, 텍스처, 크기, 랜덤 스케일 변화를 주는 Augmentation 파이프라인을 구축했습니다.
